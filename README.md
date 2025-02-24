@@ -25,6 +25,8 @@ This project implements a Convolutional Neural Network (CNN) for handwritten dig
 
 - **Preprocessing and Training with MNIST Dataset**: The system loads and preprocesses the MNIST dataset, which contains 60,000 training and 10,000 test images of handwritten digits. Data is normalized and batch-trained using backpropagation with gradient descent to enhance learning efficiency.
 
+- **ADMM Integration**: This function implements Alternating Direction Method of Multipliers (ADMM) for training a Convolutional Neural Network (CNN) on the MNIST dataset. It updates convolutional, fully connected, and output layer weights using backpropagation, momentum-based optimization, and ADMM constraints. The shrinkage function applies soft-thresholding for weight regularization.
+
 
 - **Handwritten Digit Classification**: After training, the model classifies handwritten digits with high accuracy. Input images are fed into the trained CNN, which predicts the digit using fully connected layers and the Softmax function. The system generalizes well across diverse handwriting styles.
 Input image (Digit 2 - on Paint):
