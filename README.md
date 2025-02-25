@@ -3,7 +3,7 @@
 
 # Overview
 
-This project implements a Convolutional Neural Network (CNN) for handwritten digit recognition using the MNIST dataset in MATLAB. It utilizes convolutional, pooling, ReLU, and Softmax layers to process input images and predict handwritten digits with high accuracy. The model is trained on the MNIST dataset and classifies new digit images using learned features. 
+This project implements a Convolutional Neural Network (CNN) for handwritten digit recognition using the MNIST dataset in MATLAB. It utilizes convolutional, pooling, ReLU, and Softmax layers to process input images and predict handwritten digits with high accuracy. The model is trained on the MNIST dataset and classifies new digit images using learned features. Below is an overview of the analysis, along with sample outputs and results. This project was done in May' 2023.
 
 
 
