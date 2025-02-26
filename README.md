@@ -6,8 +6,6 @@
 This project implements a Convolutional Neural Network (CNN) for handwritten digit recognition using the MNIST dataset in MATLAB. It utilizes convolutional, pooling, ReLU, and Softmax layers to process input images and predict handwritten digits with high accuracy. The model is trained on the MNIST dataset and classifies new digit images using learned features. Below is an overview of the analysis, along with sample outputs and results. This project was done in May' 2023.
 
 
-
-
 ## Block Diagram
 
 - The below block diagram gives an overview of the overall funtionality of the implemented project
@@ -47,7 +45,57 @@ Input image (Digit 2 - on Paint):
   
   </p>
 
+## Functions and Scripts
 
+### 1. `TestMnistConv()`
+
+- This script serves as the entry point for the CNN implementation.
+- Loads data and creates labels using `loadData()` and `loadLabels()` functions.
+- Invokes `MnistConv()` to perform CNN for the MNIST dataset.
+- Saves the resulting data in the 'MnistConv.mat' file for comparison.
+
+### 2. `MnistConv()`
+
+- Defines hyperparameters such as learning rate (`alpha`) and gradient descent with momentum (`beta`).
+- Executes four epoch loops, running functions like `Conv()`, `ReLU()`, `Pool()`, and `Softmax()` for each iteration.
+- Utilizes backpropagation to compute weight gradients.
+- Computes layers for the input layer, hidden layer, and convolution layer.
+
+### 3. `showMnist()`
+
+- Displays a sample of the MNIST dataset, showcasing the first 25 samples.
+
+### 4. `PlotFeatures()`
+
+- Initiates the image comparison process, relying on the 'MnistConv.mat' file.
+- Calls functions like `Conv()`, `ReLU()`, `Pool()`, and `Softmax()` for the comparison.
+- Produces matrices for visualization.
+
+### 5. `Conv()`
+
+- Performs the convolution operation on input tensors and filter sets.
+- Handles dimension adjustments and rotation.
+- Considers only samples without zero-padding.
+
+### 6. `ReLU()`
+
+- Implements Rectified Linear Unit (ReLU) to introduce non-linearity into the neural network.
+- Applied separately to the real and imaginary parts of the input.
+
+### 7. `Pool()`
+
+- Executes Maxpooling, multiplying a matrix with a smaller identity matrix.
+- Filters and extracts maximum values into a new matrix.
+
+### 8. `Softmax()`
+
+- Converts input vectors into exponential values.
+- Normalizes the resulting values.
+
+### 9. `display_network()`
+
+- Visualizes each filter type on the input.
+- Resizes samples into smaller blocks and arranges them in a matrix for display.
 
 
 
@@ -66,8 +114,6 @@ Input image (Digit 2 - on Paint):
 
 
 
-
-
 ## Tech Stack
 
 - **Language**: MATLAB
@@ -77,16 +123,6 @@ Input image (Digit 2 - on Paint):
 
 ## Installation
 
-1. **Load the MNIST Dataset**:
-- Download the MNIST dataset files (t10k-images.idx3-ubyte, t10k-labels.idx1-ubyte) and place them in the project directory.
-
-2. **Run the main script**: 
-- Open MATLAB and run: matlab and run TestMnistConv.m (for epochs and accuracy) and PlotFeatures.m (for the predicted class)
-
-
-
-
-## Running Tests
-
-The project can be implemented and tested to verify funtionality
-
+1. Run `TestMnistConv()` to execute the CNN for digit recognition.
+2. Check the generated 'MnistConv.mat' file for the results.
+3. Visualize the convolution, ReLU, pooling, and softmax operations using `PlotFeatures()`.
